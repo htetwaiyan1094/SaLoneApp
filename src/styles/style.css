@@ -1,0 +1,67 @@
+.v-content__wrap, .application--wrap {
+  background-color: white;
+}
+
+.v-tabs__slider {
+  height: 2.3px;
+}
+
+.container {
+  padding: 0 !important;
+}
+
+.align-mid {
+  display: flex;
+  align-items: center;
+}
+
+.custom-header {
+  font-family: "Google";
+  font-size: 140%;
+  font-weight: bold;
+  color: #546e7a;
+  margin-bottom: 10px;
+}
+
+.blue-grey-color {
+  color: #546e7a;
+}
+
+.zawgyi {
+  font-family: "Zawgyi";
+}
+
+.google {
+  font-family: "Google";
+}
+
+.unicode {
+  font-family: "Unicode"
+}
+
+@media only screen and (min-width: 1680px) {
+  .v-content {
+    width: 1680px;
+    margin: auto;
+  }
+}
+
+@font-face {
+  font-family: "Google";
+  src: url("../assets/fonts/Google.ttf");
+}
+
+@font-face {
+  font-family: "Zawgyi";
+  src: url("../assets/fonts/Zawgyi.ttf");
+}
+
+@font-face {
+  font-family: "Unicode";
+  src: url("../assets/fonts/Pyidaungsu-2.5_Regular.ttf");
+}
+
+@font-face {
+  font-family: "Biko";
+  src: url("../assets/fonts/Biko_Regular.otf");
+}
