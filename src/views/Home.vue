@@ -3,7 +3,7 @@
     <div id="salone" class="mid-align">
       <div id="mate-sat">
         <div id="mate-sat-card">
-          <h1 id="app-desc" class="google pb-3">Sa Lone - for Myanmar people in Singapore</h1>
+          <h1 id="app-desc" class="goougle pb-3">Sa Lone - for Myanmar people in Singapore</h1>
           <h2 class="unicode para">
             <span>စင်ကာပူရှိ မြန်မာဆိုင်များ၊ စားသောက်ဆိုင်များကို စင်ကာပူရောက်ရွှေမြန်မာတို့အတွက် စုစည်းတင်ပြထားပါသည်။</span>
           </h2>
@@ -11,9 +11,9 @@
       </div>
     </div>
     <v-container id="home-container" fluid>
-      <v-layout id="home-content" row wrap justify-space-between>
+      <v-layout id="home-content" row wrap>
         <v-flex class="my-2" v-for="(cat, index) in cats" :key="index" md4 xs12>
-          <category class="hvr-grow category" :category="cat"/>
+          <category class="category" :category="cat"/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -87,24 +87,24 @@ $primary: #546e7a;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+#app-desc {
+  font-weight: 900;
+  font-size: 225%;
+}
+
 #home {
   width: calc(100vw - 17px);
 }
 
 .category {
   height: 100%;
-  width: calc(100% - 28px);
+  width: calc(100% - 12px);
   margin: auto;
 }
 
 .para {
   width: 400px;
   margin: auto;
-}
-
-.hvr-grow {
-  display: flex;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 699px) {
@@ -121,9 +121,17 @@ $primary: #546e7a;
     padding: 10px;
   }
 
+  #home-content {
+    padding: 10px 0;
+  }
+
   #mate-sat {
     height: 200px;
-    padding-top: 10%;
+    padding-top: 7.5%;
+  }
+
+  #app-desc {
+    letter-spacing: -0.7px;
   }
 
   .category {

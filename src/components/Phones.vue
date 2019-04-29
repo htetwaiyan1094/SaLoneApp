@@ -6,9 +6,10 @@
     <v-flex xs6>
       <span>Singapore</span>
       <v-btn
-        class="phone my-2 mx-auto hvr-sweep-to-top"
-        v-for="(phone, index) in phones"
+        class="phone align-mid my-2 mx-auto"
+        v-for="(phone, index) in phones.singapore"
         :key="index"
+        @click="redirect(`tel:+65${phone}`)"
         color="blue-grey"
         outline
       >
@@ -20,8 +21,9 @@
       <span>Myanmar</span>
       <v-btn
         class="phone my-2 mx-auto hvr-sweep-to-top"
-        v-for="(phone, index) in phones"
+        v-for="(phone, index) in phones.myanmar"
         :key="index"
+        @click="redirect(`tel:+95${phone}`)"
         color="blue-grey"
         outline
       >
@@ -35,7 +37,10 @@
 <script>
 export default {
   props: {
-    phones: Array
+    phones: Object
+  },
+  methods: {
+    redirect: (url) => window.open(url)
   }
 };
 </script>

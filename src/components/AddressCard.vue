@@ -1,14 +1,15 @@
 <template>
   <Photoswipe>
-    <img class="address-card mx-auto" :style="getImgStyles" :data-pswp-src="src">
+    <div class="address-card mx-auto" :style="getImgStyles" :data-pswp-src="src"></div>
   </Photoswipe>
 </template>
 
 <script>
 export default {
   data() {
+    const imgName = this.shop.toLowerCase().replace(/\s/g, '');
     return {
-      src: require(`../assets/images/addresscards/${this.shop}.jpg`),
+      src: require(`../assets/images/addresscards/${imgName}.jpg`)
     };
   },
   props: {
@@ -20,7 +21,7 @@ export default {
       background-image: url(${this.src});
       background-position: center center;
       background-size: cover;
-      `
+      `;
     }
   }
 };

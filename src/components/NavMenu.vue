@@ -6,6 +6,7 @@
       active-class="nav-active"
       :key="index"
       :to="getLink(menu)"
+      exact
     >
       <v-btn
         flat
@@ -28,7 +29,9 @@ export default {
       this.current = menu;
     },
     getLink(menu) {
-      return `/${menu}`;
+      return {
+        name: menu
+      };
     }
   }
 };

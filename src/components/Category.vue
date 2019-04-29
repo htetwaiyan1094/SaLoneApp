@@ -1,5 +1,5 @@
 <template>
-  <v-card :href="category.redirectTo" class="elevation-2">
+  <v-card :to="{name: category.redirectTo}" class="elevation-3" ripple>
     <v-layout row>
       <div class="category-icon-section">
         <v-icon class="category-icon" x-large>{{ category.icon }}</v-icon>
